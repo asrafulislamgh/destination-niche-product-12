@@ -10,7 +10,6 @@ import userPhoto from "../../../img/user1.png";
 initializingAuthentication();
 const HeaderNav = () => {
   const { user, logout } = useAuth();
-  console.log(user);
   return (
     <div>
       {/* <HeaderTop></HeaderTop> */}
@@ -56,9 +55,9 @@ const HeaderNav = () => {
                 className="nav-item"
                 as={NavLink}
                 activeStyle={{ color: "#fff" }}
-                to="/services"
+                to="/properties"
               >
-                Services
+                Properties
               </Nav.Link>
               {user.email && (
                 <Nav.Link
@@ -80,8 +79,8 @@ const HeaderNav = () => {
                   <Nav.Link>
                     <img
                       style={{
-                        height: "50px",
-                        width: "50px",
+                        height: "44px",
+                        width: "44px",
                         borderRadius: "50%",
                       }}
                       src={user.photoURL}
@@ -92,8 +91,8 @@ const HeaderNav = () => {
                   <Nav.Link>
                     <img
                       style={{
-                        height: "50px",
-                        width: "50px",
+                        height: "44px",
+                        width: "44px",
                         borderRadius: "50%",
                       }}
                       src={userPhoto}

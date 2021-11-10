@@ -1,0 +1,123 @@
+[
+    {
+        "name": "Beautiful home for sale in Chicago",
+        "img": "https://i.pinimg.com/600x315/4f/b1/82/4fb182bada919e20b2c273321c88e012.jpg",
+        "price": 100,
+        "location": "Ranch Triangle, Chicago",
+        "description": "Beautiful, updated, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light.",
+        "bed": 3,
+        "bath": 2,
+        "area" : 1900
+    },
+    {
+        "name": "Open place with high-tech rooms",
+        "img": "https://cdn.dribbble.com/users/7900893/screenshots/15720147/media/baadee17d6ce913a298bbbae367c064e.jpg?compress=1&resize=400x300",
+        "price": 100,
+        "location": "Sheffield Neighbors, Chicago",
+        "description": "Mineral Reserves: 2008 core drilling and testing (on just 60 of the 1,100 acres) proved 30-60 million tons of high-grade calcium carbonate. Other reports show high-grade calcium carbonate throughout remainder of the property. Geological reports available. Transportation: Railroad access within 16-18 miles. Rail company may extend existing line to site. Roads: Paved, county-maintained two lane road runs from Blythe to the entrance of the property. Paved roads up to quarry then good gravel roads throughout site. Water: By well (four miles from Colorado River)",
+        "bed": 7,
+        "bath": 5,
+        "area" : 4500
+    },
+    {
+        "name": "Luxury Villa on 85-02 67 Ave",
+        "img": "https://lh3.googleusercontent.com/proxy/p8uOcNEVA96adqEwbduijuOmGGi6D4UbpXQB3w-wRYnblG8WTt_ZERwU812MDneEpqIwhXerQ8R7MkuJB46IGBjDPAfd4uW7lHyrixZtwxTgWWCoPHKm_ihKuYPM5Lsy9mqQngEn7UbcU8LE3j8",
+        "price": 110,
+        "location": "Belmont Gardens, Chicago",
+        "description": "Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR. Walking distance to the Bay Terrace Shopping Center, Baybridge Commons Shopping Center, pool clubs, movie theaters and tennis courts. 1.5 blocks away from elementary school PS 169 and Bell Academy middle school in the award-winning District 25. Don’t miss this opportunity!",
+        "bed": 3,
+        "bath": 2,
+        "area" : 1500
+    },
+    {
+        "name": "A must see Villa on Chicago Ave",
+        "img": "https://stylisheve.com/wp-content/uploads/2011/06/45-Square-Meter-Apartment.jpg",
+        "price": 100,
+        "location": "Ranch Triangle, Chicago",
+        "description": "Extraordinary, high class, ground level Co-op apartment in the desirable Bay Terrace neighborhood. This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room, large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light.",
+        "bed": 4,
+        "bath": 3,
+        "area" : 2100
+    },
+    {
+        "name": "Co-op Apartment in Bay Terrace",
+        "img": "https://www.thespruce.com/thmb/lnoT0s62HGbpCS9YSxQ-A7r2gOY=/400x300/filters:no_upscale():max_bytes(150000):strip_icc()/HP-Midcentury-Inspired-living-room-58bdef1c3df78c353cddaa07.jpg",
+        "price": 99,
+        "location": "Sheffield Neighbors, Illinois",
+        "description": "This home features hardwood floors throughout, brand new bathrooms, newer EIK, modern front-load washer/dryer, full dining room and more. Extraordinary, high class, ground level Co-op apartment in the desirable Bay Terrace neighborhood. It hav Large living area, 3 spacious bedrooms and plenty of storage. Master bedroom includes both a standard closet and custom closet wall unit. Large windows face many directions for tons of natural light.",
+        "bed": 5,
+        "bath": 3,
+        "area" : 2650
+    },
+    {
+        "name": "Gorgeous Farm in Chicago",
+        "img": "https://nativaapartments.com/wp-content/uploads/2016/04/nativa-studio-triple-feature-400x300.jpg?08d87e&08d87e",
+        "price": 130,
+        "location": "Ferris Park, Chicago",
+        "description": "This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley. Located right in the heart of Upstate NYs Amish farm Country, this land is certified organic making it extremely rare! Good road frontage on a paved county road with utilities make it an amazing setting for your dream country getaway! If you like views, you must see this property!",
+        "bed": 6,
+        "bath": 4,
+        "area" : 3100
+    },
+    {
+        "name": "BLuxury Villa In Rego Park",
+        "img": "https://my-mobilehome.com/wp-content/uploads/2021/03/San-Servolo-Camping-Resort-Mobile-Homes-Agava-interior-400x300.jpg",
+        "price": 90,
+        "location": "85-02 67 Ave, 11374, Chicago",
+        "description": "Just steps away from QM2 express bus to Manhattan and local buses; only minutes from the LIRR. Walking distance to the Bay Terrace Shopping Center, Baybridge Commons Shopping Center, pool clubs, movie theaters and tennis courts. 1.5 blocks away from elementary school PS 169 and Bell Academy middle school in the award-winning District 25. Don’t miss this opportunity!",
+        "bed": 7,
+        "bath": 6,
+        "area" : 4580
+    },
+    {
+        "name": "2 Rooms Apartment",
+        "img": "https://www.justrentmarbella.com/wp-content/uploads/2020/01/JRM-La-Maestranza-Penthouse-1-400x300.jpg",
+        "price": 210,
+        "location": "1532 N Artesian Ane, Belmont Gardens",
+        "description": "Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood Floors, Cherry Cabinets And New Bath And Complete Set Of Stainless Steel Appliances. Large 5 Bedrooms House With Seperate Living, Dinning And Office/Study Room. Must See To Appreciate",
+        "bed": 2,
+        "bath": 2,
+        "area" : 900
+    },
+    {
+        "name": "5 Room Apartment Special Deal",
+        "img": "https://cdn.dribbble.com/users/7900893/screenshots/15720147/media/8c3144fc726fb7024746b6c0fc35cc09.jpg?compress=1&resize=400x300",
+        "price": 100,
+        "location": "412 N Hart St, Chicago",
+        "description": "Downtown Frederick hot spot. Top location for local entertainment. All fixtures are included. Liquor license can be included. Price includes 3 leased apartments on the second floor income $2,200 per month. Free standing built out restaurant with separate dining/banquet room. Spacious outdoor dining deck. Large commercial kitchen fully equipped. Seating capacity over 200 with large event area with stage and movable dance floor. This opportunity is perfect for investor or owner operator. Keep existing concept or introduce your own.",
+        "bed": 5,
+        "bath": 4,
+        "area" : 1880
+    },
+    {
+        "name": "Lovelace Road in City Center",
+        "img": "https://dandg.azureedge.net/dandgweb/p-72272/photos/original/photo_72272_11.jpg/400x300.jpg",
+        "price": 180,
+        "location": "Center location, Chicago",
+        "description": "This property is mostly wooded and sits high on a hilltop overlooking the Mohawk River Valley. Located right in the heart of Upstate NYs Amish farm Country, this land is certified organic making it EXTREMELY RARE! Good road frontage on a paved county road with utilities make it an amazing setting for your dream country getaway! If you like views, you MUST SEE this property!",
+        "bed": 2,
+        "bath": 1,
+        "area" : 800
+    },
+    {
+        "name": "2 Rooms Apartment – Multiple Agents",
+        "img": "https://images.homhero.com.au/400x300/10991ec2-c20f-4ecc-beaa-f91afc866e1b/listing/25/1f317d14-14b1-482c-a3ae-b4893713cecb.jpg",
+        "price": 100,
+        "location": "1532 N Artesian Ane, Chicago",
+        "description": "There are 2 rooms having 1 bathroom which is situated in a nice place. Beautiful Huge 1 Family House In Heart Of Westbury. Newly Renovated With New Wood Floors, Cherry Cabinets And New Bath And Complete Set Of Stainless Steel Appliances. Large 5 Bedrooms House With Seperate Living, Dinning And Office/Study Room. Must See To Appreciate.",
+        "bed": 2,
+        "bath": 1,
+        "area" : 770
+    },
+    {
+        "name": "Property with Full Header Slider",
+        "img": "https://dandg.azureedge.net/dandgweb/p-69505/photos/original/photo_69505_59.jpg/400x300.jpg",
+        "price": 100,
+        "location": "1443 N Talman Ave, Chicago",
+        "description": "Former high end beach home converted to Class “A” office space. 2519 sq ft complete with three and 1/2 baths. Large eat in kitchen/conference area. Many storage areas and closets. Currently used as 10 offices with large reception area. Fully wired with Cat 5 wiring to all, phone room. Exterior storage and parking spaces for 12 cars. Huge frontage on 30-A and award winning landscaping. Great opportunity to have a landmark location on Scenic 30-A with over 200′ of 30-A frontage.",
+        "bed": 4,
+        "bath": 3,
+        "area" : 1400
+    }
+    
+]
