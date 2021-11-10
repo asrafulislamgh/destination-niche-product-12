@@ -1,3 +1,16 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a,
+li,
+ul,
+ol {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
 .App {
   text-align: center;
 }

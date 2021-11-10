@@ -1,0 +1,25 @@
+.footer-text {
+  color: rgb(219, 219, 219);
+  font-size: 1rem;
+}
+.footer-bg {
+  background-color: black;
+  padding: 10px 0;
+}
+.common-btn {
+  background-color: #cb0101;
+  text-decoration: none;
+  color: white;
+}
+.common-btn:hover {
+  background-color: #a80000;
+  color: white;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+}
+.footer-links {
+  line-height: 2rem;
+}
