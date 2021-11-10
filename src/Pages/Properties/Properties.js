@@ -5,7 +5,7 @@ import Property from "../Property/Property";
 const Properties = () => {
   const [properties, setProperties] = useState([]);
   useEffect(() => {
-    fetch("/properties.json")
+    fetch("https://intense-taiga-54509.herokuapp.com/properties")
       .then((res) => res.json())
       .then((data) => setProperties(data));
   }, []);
