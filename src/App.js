@@ -4,6 +4,8 @@ import "./App.css";
 import AuthProvider from "./contexts/AuthProvider";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/login/Login";
+import MakeAdmin from "./Pages/MakeAdmin/MakeAdmin";
+import ManageOrders from "./Pages/ManageOrders/ManageOrders";
 import MyOrder from "./Pages/MyOrder/MyOrder";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Properties from "./Pages/Properties/Properties";
@@ -38,6 +40,12 @@ function App() {
           </PrivateRoute>
           <PrivateRoute path="/myorder">
             <MyOrder />
+          </PrivateRoute>
+          <PrivateRoute path="/manageorders">
+            <ManageOrders />
+          </PrivateRoute>
+          <PrivateRoute path="/makeadmin">
+            <MakeAdmin />
           </PrivateRoute>
         </Switch>
         <Footer></Footer>

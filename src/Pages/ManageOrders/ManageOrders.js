@@ -1,18 +1,46 @@
 import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Badge, Button } from "react-bootstrap";
 import Swal from "sweetalert2";
-import useAuth from "../../hooks/useAuth";
 
-const MyOrder = () => {
+const ManageOrders = () => {
   const [myOrders, setMyOrders] = useState([]);
-  const { user } = useAuth();
+  const [pending, setPending] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(`http://localhost:5000/orders`)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
-  }, [user.email]);
+  }, [pending]);
 
+  const handleUpdate = (id) => {
+    fetch(`http://localhost:5000/update/${id}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.modifiedCount > 0) {
+          setPending(false);
+          let timerInterval;
+          Swal.fire({
+            title: "The order is approved successfully!",
+            // html: "You are redirecting to your <b></b> desired page.",
+            timer: 1500,
+            timerProgressBar: true,
+            didOpen: () => {
+              Swal.showLoading();
+              timerInterval = setInterval(() => {}, 100);
+            },
+            willClose: () => {
+              clearInterval(timerInterval);
+            },
+          }).then((result) => {});
+        }
+      });
+    console.log(id);
+  };
   const handleDelete = (id) => {
     const deleteOrder = () => {
       fetch(`http://localhost:5000/orders/${id}`, {
@@ -128,7 +156,19 @@ const MyOrder = () => {
                   ft<sup>2</sup>
                 </small>
               </h2>
-
+              {!myOrder.status ? (
+                <Button
+                  onClick={() => handleUpdate(myOrder._id)}
+                  variant="light"
+                  className="common-btn3 mt-4 mx-2"
+                >
+                  Pending
+                </Button>
+              ) : (
+                <Button variant="success" className="btn btn-success mt-4 mx-2">
+                  Confirmed
+                </Button>
+              )}
               <Button
                 onClick={() => handleDelete(myOrder._id)}
                 variant="danger"
@@ -169,4 +209,4 @@ const MyOrder = () => {
   );
 };
 
-export default MyOrder;
+export default ManageOrders;

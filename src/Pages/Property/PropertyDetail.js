@@ -40,11 +40,12 @@ const PropertyDetail = () => {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-
+    console.log(data);
     console.log(e.defaultPrevented);
     selectedProperty.status = 0;
     selectedProperty.id = id;
     selectedProperty._id = null;
+    selectedProperty.email = data.email;
     selectedProperty.user = data;
     selectedProperty.user.photoURL = user.photoURL;
 

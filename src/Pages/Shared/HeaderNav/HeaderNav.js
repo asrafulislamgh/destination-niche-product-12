@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./HeaderNav.css";
 import logo from "../../../img/logo.png";
 import { Container, Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
@@ -10,6 +10,18 @@ import userPhoto from "../../../img/user1.png";
 initializingAuthentication();
 const HeaderNav = () => {
   const { user, logout } = useAuth();
+  const [isAdmin, setIsAdmin] = useState(false);
+  useEffect(() => {
+    console.log(user.email);
+    fetch(`http://localhost:5000/users?email=${user.email}`)
+      .then((res) => res.json())
+      .then((data) => {
+        if (data?.role === "admin") {
+          setIsAdmin(true);
+        }
+        console.log(data?.role);
+      });
+  }, [user.email]);
   return (
     <div>
       {/* <HeaderTop></HeaderTop> */}
@@ -60,19 +72,23 @@ const HeaderNav = () => {
                 Properties
               </Nav.Link>
               {user.email && (
-                // <Nav.Link
-                //   className="nav-item"
-                //   as={NavLink}
-                //   activeStyle={{ color: "#fff" }}
-                //   to="/dashboard"
-                // >
-                //   Dashboard
-                // </Nav.Link>
-
                 <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
                   <NavDropdown.Item as={NavLink} to="/myorder">
                     My Order
                   </NavDropdown.Item>
+                  <NavDropdown.Item as={NavLink} to="/review">
+                    Review
+                  </NavDropdown.Item>
+                  {isAdmin && (
+                    <div>
+                      <NavDropdown.Item as={NavLink} to="/manageorders">
+                        Manage Orders
+                      </NavDropdown.Item>
+                      <NavDropdown.Item as={NavLink} to="/makeadmin">
+                        Make Admin
+                      </NavDropdown.Item>
+                    </div>
+                  )}
                 </NavDropdown>
               )}
             </Nav>

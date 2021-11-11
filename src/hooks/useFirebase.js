@@ -27,6 +27,19 @@ const useFirebase = () => {
       setIsLoading(false);
     });
   }, [auth]);
+
+  const saveUser = (email, name) => {
+    const newUser = { email, displayName: name };
+    fetch("http://localhost:5000/users", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(newUser),
+    })
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
   const handleRegistration = (name, email, password, history, location) => {
     setIsLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
@@ -39,6 +52,7 @@ const useFirebase = () => {
         Swal.fire("Good job!", "Your registration is successful!", "success");
         setIsLoading(false);
         history.push(location);
+        saveUser(email, name);
       })
       .catch((error) => {
         setError(error.message);
