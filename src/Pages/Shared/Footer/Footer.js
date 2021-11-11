@@ -156,7 +156,7 @@ const Footer = () => {
             <Col>
               <div className="text-center">
                 <p style={{ fontSize: "14px", color: "#999" }}>
-                  Copyright by Travelers' 2021. All rights reserved.
+                  Copyright by Destination Inc. 2021. All rights reserved.
                 </p>
               </div>
             </Col>

@@ -13,13 +13,13 @@ import useAuth from "../../hooks/useAuth";
 import "./Registration.css";
 
 const Registration = () => {
-  const { googleLogin, error, handleRegistration } = useAuth();
+  const { googleLogin, error, handleRegistration, setError } = useAuth();
   const [loginInfo, setLoginInfo] = useState({});
 
   const location = useLocation();
   const history = useHistory();
   const redirect_url = location.state?.from || "/";
-
+  setError("");
   const handleOnBlur = (e) => {
     const field = e.target.name;
     const value = e.target.value;
@@ -28,7 +28,13 @@ const Registration = () => {
     setLoginInfo(newLoginInfo);
   };
   const registration = (e) => {
-    handleRegistration(loginInfo.name, loginInfo.email, loginInfo.password);
+    handleRegistration(
+      loginInfo.name,
+      loginInfo.email,
+      loginInfo.password,
+      history,
+      redirect_url
+    );
 
     e.preventDefault();
   };

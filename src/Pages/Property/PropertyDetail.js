@@ -11,12 +11,13 @@ import {
   FormControl,
 } from "react-bootstrap";
 import { useParams, Link, useHistory } from "react-router-dom";
-// import "./Appointment.css";
 import useAuth from "../../hooks/useAuth";
+import Swal from "sweetalert2";
+// import "./Appointment.css";
 
-const ServiceDetail = () => {
+const PropertyDetail = () => {
   const { id } = useParams();
-  const [services, setServices] = useState([]);
+  const [properties, setProperties] = useState([]);
   const { user } = useAuth();
   const history = useHistory();
   const {
@@ -27,13 +28,13 @@ const ServiceDetail = () => {
   } = useForm();
 
   useEffect(() => {
-    fetch("https://mighty-dawn-62358.herokuapp.com/services")
+    fetch("https://intense-taiga-54509.herokuapp.com/properties")
       .then((res) => res.json())
-      .then((result) => setServices(result));
+      .then((result) => setProperties(result));
   }, []);
 
-  const selectedService = services.find(
-    (service) => service._id === id
+  const selectedProperty = properties.find(
+    (property) => property._id === id
     // (service) => console.log(service._id, id)
   );
 
@@ -41,26 +42,24 @@ const ServiceDetail = () => {
     e.preventDefault();
 
     console.log(e.defaultPrevented);
-    // const handleBook = (id) => {
-    selectedService.status = 0;
-    selectedService.id = id;
-    selectedService._id = null;
-    // selectedService.user = user;
-    selectedService.user = data;
-    selectedService.user.photoURL = user.photoURL;
+    selectedProperty.status = 0;
+    selectedProperty.id = id;
+    selectedProperty._id = null;
+    selectedProperty.user = data;
+    selectedProperty.user.photoURL = user.photoURL;
 
-    fetch("https://mighty-dawn-62358.herokuapp.com/booking", {
+    fetch("http://intense-taiga-54509.herokuapp.com/orders", {
       method: "post",
       headers: {
         "content-type": "application/json",
       },
-      body: JSON.stringify(selectedService),
+      body: JSON.stringify(selectedProperty),
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(selectedService);
+        console.log(selectedProperty);
         history.push("/myorder");
-        alert("A new booking is added successfully!");
+        Swal.fire("Good job!", "You have ordered successfully!", "success");
       });
     reset();
     // };
@@ -70,28 +69,28 @@ const ServiceDetail = () => {
       <Row className="gy-3 gy-sm-5">
         <Col xl={5} lg={4} md={6}>
           <div>
-            <img className="w-100 rounded" src={selectedService?.img} alt="" />
+            <img className="w-100 rounded" src={selectedProperty?.img} alt="" />
           </div>
         </Col>
         <Col xl={3} lg={3} md={5} className="mx-4">
           <div>
-            <h1>{selectedService?.name}</h1>
-            <p>{selectedService?.description}</p>
+            <h1>{selectedProperty?.name}</h1>
+            <p>{selectedProperty?.description}</p>
             <Card.Text className="card-info">
               <Badge pill bg="warning" className="px-3 me-2" text="dark">
-                <h6 className="mb-0"> Day: {selectedService?.day}</h6>
+                <h6 className="mb-0"> Day: {selectedProperty?.day}</h6>
               </Badge>
               <Badge pill bg="dark" className="px-3  me-2" text="light">
-                <h6 className="mb-0"> Day: {selectedService?.night}</h6>
+                <h6 className="mb-0"> Day: {selectedProperty?.night}</h6>
               </Badge>
             </Card.Text>
-            <h3>${selectedService?.price}</h3>
+            <h3>${selectedProperty?.price}</h3>
           </div>
         </Col>
         <Col xl={3} lg={3} md={12} className="mx-4">
           <Row className="d-flex justify-content-center text-center">
             <Col style={{ maxWidth: "400px" }}>
-              <h3 className="py-3">Add Service</h3>
+              <h3 className="py-3">Order Now</h3>
               <Form onSubmit={handleSubmit(onSubmit)}>
                 <FormControl
                   {...register("displayName")}
@@ -127,14 +126,6 @@ const ServiceDetail = () => {
                   aria-label="address"
                   aria-describedby="basic-addon2"
                 />
-                <FormControl
-                  {...register("number", { required: true })}
-                  className="input-field mb-3"
-                  placeholder="Ticket Number"
-                  aria-label="ticket"
-                  type="number"
-                  aria-describedby="basic-addon2"
-                />
 
                 <Form.Group className="mb-3" controlId="formBasicCheckbox">
                   <Form.Text className="text-danger"></Form.Text>
@@ -150,7 +141,7 @@ const ServiceDetail = () => {
                     type="submit"
                     className="btn common-btn3 py-3"
                   >
-                    Book Now
+                    Order Now
                   </Button>
                 </div>
               </Form>
@@ -181,4 +172,4 @@ const ServiceDetail = () => {
   );
 };
 
-export default ServiceDetail;
+export default PropertyDetail;

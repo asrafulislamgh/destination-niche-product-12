@@ -1,7 +1,7 @@
 import React from "react";
 import "./HeaderNav.css";
 import logo from "../../../img/logo.png";
-import { Container, Nav, Navbar, Button } from "react-bootstrap";
+import { Container, Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import initializingAuthentication from "../../../firebase/firebase.init";
 import useAuth from "../../../hooks/useAuth";
@@ -60,14 +60,20 @@ const HeaderNav = () => {
                 Properties
               </Nav.Link>
               {user.email && (
-                <Nav.Link
-                  className="nav-item"
-                  as={NavLink}
-                  activeStyle={{ color: "#fff" }}
-                  to="/dashboard"
-                >
-                  Dashboard
-                </Nav.Link>
+                // <Nav.Link
+                //   className="nav-item"
+                //   as={NavLink}
+                //   activeStyle={{ color: "#fff" }}
+                //   to="/dashboard"
+                // >
+                //   Dashboard
+                // </Nav.Link>
+
+                <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
+                  <NavDropdown.Item as={NavLink} to="/myorder">
+                    My Order
+                  </NavDropdown.Item>
+                </NavDropdown>
               )}
             </Nav>
 

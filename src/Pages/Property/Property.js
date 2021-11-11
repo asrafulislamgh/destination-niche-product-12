@@ -6,6 +6,7 @@ import "./Property.css";
 const Property = ({ propertyItem }) => {
   const { _id, name, price, description, img, location, area, bath, bed } =
     propertyItem;
+  // console.log(propertyItem);
   return (
     <div>
       <CardGroup>
@@ -42,7 +43,7 @@ const Property = ({ propertyItem }) => {
             </Card.Title>
           </Card.Body>
           <Card.Footer className="card-body">
-            <Link to={`/service/${_id}`}>
+            <Link to={`/properties/${_id}`}>
               <Button variant="dark" className="common-btn3">
                 Book Now
               </Button>

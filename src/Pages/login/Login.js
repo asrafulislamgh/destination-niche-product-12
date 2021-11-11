@@ -27,7 +27,7 @@ const Login = () => {
   };
   const handleEmailLogin = (e) => {
     e.preventDefault();
-    emailLogin(loginInfo.email, loginInfo.password);
+    emailLogin(loginInfo.email, loginInfo.password, history, redirect_url);
   };
 
   const googleSignin = () => {
