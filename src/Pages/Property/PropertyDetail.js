@@ -49,7 +49,7 @@ const PropertyDetail = () => {
     selectedProperty.user = data;
     selectedProperty.user.photoURL = user.photoURL;
 
-    fetch("http://intense-taiga-54509.herokuapp.com/orders", {
+    fetch("https://intense-taiga-54509.herokuapp.com/orders", {
       method: "post",
       headers: {
         "content-type": "application/json",
