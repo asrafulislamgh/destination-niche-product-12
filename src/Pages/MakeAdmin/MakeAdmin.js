@@ -15,7 +15,7 @@ const MakeAdmin = () => {
     setAdminEmail(e.target.value);
   };
   const handleEmailLogin = (e) => {
-    fetch(`http://localhost:5000/users/${adminEmail}`, {
+    fetch(`https://intense-taiga-54509.herokuapp.com/users/${adminEmail}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

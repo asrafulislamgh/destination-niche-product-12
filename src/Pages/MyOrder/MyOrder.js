@@ -8,14 +8,16 @@ const MyOrder = () => {
   const { user } = useAuth();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders?email=${user.email}`)
+    fetch(
+      `https://intense-taiga-54509.herokuapp.com/orders?email=${user.email}`
+    )
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
   }, [user.email]);
 
   const handleDelete = (id) => {
     const deleteOrder = () => {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://intense-taiga-54509.herokuapp.com/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())
@@ -65,22 +67,6 @@ const MyOrder = () => {
         }
       });
   };
-
-  // const confirmation = window.confirm("Are you sure to delete this?");
-  //   if (confirmation) {
-  //     fetch(`http://localhost:5000/orders/${id}`, {
-  //       method: "DELETE",
-  //     })
-  //       .then((res) => res.json())
-  //       .then((result) => {
-  //         if (result.deletedCount === 1) {
-  //           alert("One item is deleted successfully!");
-  //         }
-  //         const remainingOrders = myOrders.filter((order) => order._id !== id);
-  //         setMyOrders(remainingOrders);
-  //       });
-  //   }
-  // };
 
   return (
     <div>

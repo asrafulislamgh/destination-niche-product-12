@@ -7,13 +7,13 @@ const ManageOrders = () => {
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
-    fetch(`http://localhost:5000/orders`)
+    fetch(`https://intense-taiga-54509.herokuapp.com/orders`)
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
   }, [pending]);
 
   const handleUpdate = (id) => {
-    fetch(`http://localhost:5000/update/${id}`, {
+    fetch(`https://intense-taiga-54509.herokuapp.com/update/${id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -43,7 +43,7 @@ const ManageOrders = () => {
   };
   const handleDelete = (id) => {
     const deleteOrder = () => {
-      fetch(`http://localhost:5000/orders/${id}`, {
+      fetch(`https://intense-taiga-54509.herokuapp.com/orders/${id}`, {
         method: "DELETE",
       })
         .then((res) => res.json())

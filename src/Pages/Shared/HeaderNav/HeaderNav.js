@@ -13,7 +13,7 @@ const HeaderNav = () => {
   const [isAdmin, setIsAdmin] = useState(false);
   useEffect(() => {
     console.log(user.email);
-    fetch(`http://localhost:5000/users?email=${user.email}`)
+    fetch(`https://intense-taiga-54509.herokuapp.com/users?email=${user.email}`)
       .then((res) => res.json())
       .then((data) => {
         if (data?.role === "admin") {
