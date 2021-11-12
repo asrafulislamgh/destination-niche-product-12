@@ -7,7 +7,7 @@ import userImg from "../../../img/user.jpg";
 export default function FeaturesProperty() {
   const [reviews, setReviews] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://intense-taiga-54509.herokuapp.com/reviews")
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);

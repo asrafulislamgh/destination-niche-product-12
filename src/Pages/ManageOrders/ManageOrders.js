@@ -93,22 +93,6 @@ const ManageOrders = () => {
       });
   };
 
-  // const confirmation = window.confirm("Are you sure to delete this?");
-  //   if (confirmation) {
-  //     fetch(`http://localhost:5000/orders/${id}`, {
-  //       method: "DELETE",
-  //     })
-  //       .then((res) => res.json())
-  //       .then((result) => {
-  //         if (result.deletedCount === 1) {
-  //           alert("One item is deleted successfully!");
-  //         }
-  //         const remainingOrders = myOrders.filter((order) => order._id !== id);
-  //         setMyOrders(remainingOrders);
-  //       });
-  //   }
-  // };
-
   return (
     <div>
       <Container>

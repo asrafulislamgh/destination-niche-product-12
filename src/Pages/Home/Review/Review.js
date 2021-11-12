@@ -27,7 +27,7 @@ const Review = () => {
     newData.rating = data.rating / 20;
     newData.photoURL = user.photoURL;
 
-    fetch("http://localhost:5000/reviews", {
+    fetch("https://intense-taiga-54509.herokuapp.com/reviews", {
       method: "POST",
       headers: {
         "content-type": "application/json",
