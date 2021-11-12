@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./HeaderNav.css";
 import logo from "../../../img/logo.png";
 import { Container, Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
@@ -9,22 +9,9 @@ import userPhoto from "../../../img/user1.png";
 
 initializingAuthentication();
 const HeaderNav = () => {
-  const { user, logout } = useAuth();
-  const [isAdmin, setIsAdmin] = useState(false);
-  useEffect(() => {
-    console.log(user.email);
-    fetch(`https://intense-taiga-54509.herokuapp.com/users?email=${user.email}`)
-      .then((res) => res.json())
-      .then((data) => {
-        if (data?.role === "admin") {
-          setIsAdmin(true);
-        }
-        console.log(data?.role);
-      });
-  }, [user.email]);
+  const { user, logout, isAdmin } = useAuth();
   return (
     <div>
-      {/* <HeaderTop></HeaderTop> */}
       <Navbar
         collapseOnSelect
         expand="lg"
@@ -71,6 +58,7 @@ const HeaderNav = () => {
               >
                 Properties
               </Nav.Link>
+
               {user.email && (
                 <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
                   <NavDropdown.Item as={NavLink} to="/myorder">
@@ -127,8 +115,6 @@ const HeaderNav = () => {
 
             <Nav>
               {user.displayName && <Nav.Link>{user.displayName}</Nav.Link>}
-
-              {/* Logout */}
 
               {user.email ? (
                 <Nav.Link onClick={logout}>Logout</Nav.Link>

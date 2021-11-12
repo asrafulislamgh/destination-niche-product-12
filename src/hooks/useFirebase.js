@@ -9,13 +9,16 @@ import {
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 import Swal from "sweetalert2";
 
 const useFirebase = () => {
   const [user, setUser] = useState({});
   const [error, setError] = useState("");
   const [isLoading, setIsLoading] = useState(true);
+  const [isAdmin, setIsAdmin] = useState(false);
   const auth = getAuth();
+  const history = useHistory();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -28,17 +31,23 @@ const useFirebase = () => {
     });
   }, [auth]);
 
-  const saveUser = (email, name) => {
+  useEffect(() => {
+    fetch(`http://localhost:5000/users/${user.email}`)
+      .then((res) => res.json())
+      .then((data) => setIsAdmin(data.admin));
+  }, [user.email]);
+
+  const saveUser = (email, name, method) => {
     const newUser = { email, displayName: name };
     fetch("https://intense-taiga-54509.herokuapp.com/users", {
-      method: "POST",
+      method: method,
       headers: {
         "content-type": "application/json",
       },
       body: JSON.stringify(newUser),
     })
       .then((res) => res.json())
-      .then((data) => console.log(data));
+      .then((data) => {});
   };
   const handleRegistration = (name, email, password, history, location) => {
     setIsLoading(true);
@@ -52,7 +61,7 @@ const useFirebase = () => {
         Swal.fire("Good job!", "Your registration is successful!", "success");
         setIsLoading(false);
         history.push(location);
-        saveUser(email, name);
+        saveUser(email, name, "POST");
       })
       .catch((error) => {
         setError(error.message);
@@ -66,6 +75,7 @@ const useFirebase = () => {
         setUser(result.user);
         setIsLoading(false);
         history.push(location);
+        saveUser(result.user.email, result.user.displayName, "PUT");
       })
       .catch((error) => setError(error.message));
   };
@@ -102,13 +112,17 @@ const useFirebase = () => {
   const logout = () => {
     setIsLoading(true);
     signOut(auth)
-      .then(() => setIsLoading(false))
+      .then(() => {
+        setIsLoading(false);
+        history.push("/home");
+      })
       .catch((error) => {
         setError(error.message);
       });
   };
   return {
     user,
+    isAdmin,
     error,
     isLoading,
     setIsLoading,

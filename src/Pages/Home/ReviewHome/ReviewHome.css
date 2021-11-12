@@ -1,0 +1,22 @@
+.reviewContainer {
+  background-color: rgb(238, 238, 238);
+  padding: 20px;
+}
+.userImg {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.rating {
+  color: #ffa500;
+  font-size: 8px;
+  margin-left: 5px;
+}
+.qoute {
+  font-size: 2rem;
+}
+.commentText {
+  color: rgb(87, 87, 87);
+}

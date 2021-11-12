@@ -6,7 +6,6 @@ import "./Property.css";
 const Property = ({ propertyItem }) => {
   const { _id, name, price, description, img, location, area, bath, bed } =
     propertyItem;
-  // console.log(propertyItem);
   return (
     <div>
       <CardGroup>

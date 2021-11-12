@@ -24,7 +24,7 @@ const MakeAdmin = () => {
       .then((res) => res.json())
       .then((data) => {
         if (data.modifiedCount > 0) {
-          Swal.fire("Good job!", "You clicked the button!", "success");
+          Swal.fire("Good job!", "A new admin is created!", "success");
         }
       });
     e.preventDefault();

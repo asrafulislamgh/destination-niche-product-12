@@ -39,7 +39,6 @@ const ManageOrders = () => {
           }).then((result) => {});
         }
       });
-    console.log(id);
   };
   const handleDelete = (id) => {
     const deleteOrder = () => {

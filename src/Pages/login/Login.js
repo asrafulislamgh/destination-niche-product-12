@@ -60,6 +60,7 @@ const Login = () => {
                 placeholder="Password"
                 aria-label="password"
                 aria-describedby="basic-addon2"
+                required
               />
 
               <Form.Group className="mb-3" controlId="formBasicCheckbox">

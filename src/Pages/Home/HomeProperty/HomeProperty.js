@@ -14,8 +14,6 @@ const HomeProperty = () => {
       });
   }, []);
   let limitedProperty = properties.slice(1, 7);
-  console.log(properties);
-  // console.log(limitedProperty);
 
   return (
     <div>

@@ -3,8 +3,9 @@ import { Spinner } from "react-bootstrap";
 import { Redirect, Route } from "react-router";
 import useAuth from "../../hooks/useAuth";
 
-const PrivateRoute = ({ children, ...rest }) => {
-  const { user, isLoading } = useAuth();
+const AdminRoute = ({ children, ...rest }) => {
+  const { user, isLoading, isAdmin } = useAuth();
+
   if (isLoading) {
     return (
       <div className="d-flex justify-center align-items-center flex-column py-5 my-5 mx-auto">
@@ -16,7 +17,7 @@ const PrivateRoute = ({ children, ...rest }) => {
     <Route
       {...rest}
       render={({ location }) =>
-        user.email ? (
+        user.email && isAdmin ? (
           children
         ) : (
           <Redirect
@@ -31,4 +32,4 @@ const PrivateRoute = ({ children, ...rest }) => {
   );
 };
 
-export default PrivateRoute;
+export default AdminRoute;

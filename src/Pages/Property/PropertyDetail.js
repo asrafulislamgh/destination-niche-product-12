@@ -33,15 +33,10 @@ const PropertyDetail = () => {
       .then((result) => setProperties(result));
   }, []);
 
-  const selectedProperty = properties.find(
-    (property) => property._id === id
-    // (service) => console.log(service._id, id)
-  );
+  const selectedProperty = properties.find((property) => property._id === id);
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-    console.log(data);
-    console.log(e.defaultPrevented);
     selectedProperty.status = 0;
     selectedProperty.id = id;
     selectedProperty._id = null;
@@ -58,7 +53,6 @@ const PropertyDetail = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        console.log(selectedProperty);
         history.push("/myorder");
         Swal.fire("Good job!", "You have ordered successfully!", "success");
       });
