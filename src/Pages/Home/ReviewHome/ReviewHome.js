@@ -19,14 +19,14 @@ const ReviewHome = () => {
         {reviews.map((review) => (
           <Col>
             <div className="reviewContainer">
-              <div className="d-flex justify-between align-items-center">
+              <div className="d-flex justify-content-center align-items-center text-center">
                 <img
                   style={{ width: "80px" }}
                   className="userImg"
                   src={review.photoURL === null ? userImg : review.photoURL}
                   alt=""
                 />
-                <h4 className="ms-3">{review.displayName}</h4>
+                <h5 className="ms-3">{review.displayName}</h5>
               </div>
               <div className="text-center mt-3">
                 <p>

@@ -7,7 +7,7 @@ const ManageOrders = () => {
   const [pending, setPending] = useState(true);
 
   useEffect(() => {
-    fetch(`https://intense-taiga-54509.herokuapp.com/orders`)
+    fetch("https://intense-taiga-54509.herokuapp.com/orders")
       .then((res) => res.json())
       .then((data) => setMyOrders(data));
   }, [pending]);
