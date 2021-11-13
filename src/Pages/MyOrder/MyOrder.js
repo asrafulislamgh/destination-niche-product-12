@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Badge, Button } from "react-bootstrap";
+import { Container, Row, Col, Badge, Button, Card } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 
@@ -88,14 +88,35 @@ const MyOrder = () => {
             <Col>
               <h2>{myOrder.name}</h2>
               <p>{myOrder.description}</p>
-              <Badge pill bg="warning" className="px-3 py-2 me-2" text="dark">
-                Bedroom: {myOrder.bed}
-              </Badge>
-              <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
-                Bathroom: {myOrder.bath}
-              </Badge>
-              <small>Total Area: {myOrder.area}</small>
-              <br />
+              <Card.Text className="card-info">
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-bed me-2"></i> {myOrder.bed}
+                </Badge>
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-bath me-2"></i> {myOrder.bath}
+                </Badge>
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-layer-group me-2"></i> {myOrder.area}{" "}
+                  <small>
+                    ft<sup>2</sup>
+                  </small>
+                </Badge>
+              </Card.Text>
               <small>Ordered by: </small>
               <img
                 style={{

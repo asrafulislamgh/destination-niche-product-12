@@ -21,7 +21,7 @@ const Properties = () => {
     // </div>
   }
   return (
-    <div>
+    <div style={{ backgroundColor: "#F7F4FB" }}>
       <HeaderNav />
       <Container className="py-5">
         <h1 className="py-5 text-center">Our Latest Properties</h1>

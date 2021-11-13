@@ -1,0 +1,14 @@
+.about-heading {
+  font-weight: 200;
+  font-size: 400%;
+}
+.about-heading span {
+  color: #e10f28;
+  font-weight: 600;
+}
+.background {
+  background-image: url("../../../img/wave2.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}

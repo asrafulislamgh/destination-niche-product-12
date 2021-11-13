@@ -9,7 +9,7 @@ const Property = ({ propertyItem }) => {
   return (
     <div>
       <CardGroup>
-        <Card className="card-container text-center">
+        <Card className="card-container text-center border-0">
           <Card.Img variant="top" src={img} />
           <Card.Body className="card-body">
             <Card.Title className="card-title text-truncate">{name}</Card.Title>
@@ -24,16 +24,40 @@ const Property = ({ propertyItem }) => {
             >
               {description}
             </Card.Text>
-            <Card.Text className="card-info">{location}</Card.Text>
-            <Card.Text className="card-info">{area}</Card.Text>
+
             <Card.Text className="card-info">
-              <Badge pill bg="warning" className="px-3 py-2 me-2" text="dark">
-                Bedroom: {bed}
+              <Badge
+                pill
+                bg="light"
+                className="px-3 py-2 me-2 badge-icon"
+                text="dark"
+              >
+                <i class="fas fa-bed me-2"></i> {bed}
               </Badge>
-              <Badge pill bg="dark" className="px-3 py-2 me-2" text="light">
-                Bathroom: {bath}
+              <Badge
+                pill
+                bg="light"
+                className="px-3 py-2 me-2 badge-icon"
+                text="dark"
+              >
+                <i class="fas fa-bath me-2"></i> {bath}
+              </Badge>
+              <Badge
+                pill
+                bg="light"
+                className="px-3 py-2 me-2 badge-icon"
+                text="dark"
+              >
+                <i class="fas fa-layer-group me-2"></i> {area}{" "}
+                <small>
+                  ft<sup>2</sup>
+                </small>
               </Badge>
             </Card.Text>
+            <Card.Text className="card-info">
+              <i class="fas fa-map-marker-alt me-2"></i> {location}
+            </Card.Text>
+
             <Card.Title className="card-title">
               ${price} /{" "}
               <small>
@@ -41,7 +65,7 @@ const Property = ({ propertyItem }) => {
               </small>
             </Card.Title>
           </Card.Body>
-          <Card.Footer className="card-body">
+          <Card.Footer className="card-body border-0">
             <Link to={`/properties/${_id}`}>
               <Button variant="dark" className="common-btn3">
                 Book Now

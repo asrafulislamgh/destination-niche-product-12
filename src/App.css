@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400;500;600;700&display=swap");
+
 * {
   padding: 0;
   margin: 0;
@@ -10,6 +12,9 @@ ol {
   list-style: none;
   text-decoration: none;
   color: inherit;
+}
+body {
+  font-family: "Exo 2", sans-serif;
 }
 .App {
   text-align: center;

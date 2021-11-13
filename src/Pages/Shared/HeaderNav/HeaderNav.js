@@ -42,14 +42,7 @@ const HeaderNav = () => {
               >
                 Home
               </Nav.Link>
-              <Nav.Link
-                className="nav-item"
-                as={NavLink}
-                activeStyle={{ color: "#fff" }}
-                to="/aboutus"
-              >
-                About
-              </Nav.Link>
+
               <Nav.Link
                 className="nav-item"
                 as={NavLink}

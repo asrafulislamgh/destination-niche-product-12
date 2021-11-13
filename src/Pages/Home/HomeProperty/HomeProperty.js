@@ -16,7 +16,7 @@ const HomeProperty = () => {
   let limitedProperty = properties.slice(1, 7);
 
   return (
-    <div>
+    <div style={{ backgroundColor: "#F7F4FB" }}>
       <Container className="py-5">
         <h1 className="py-5 text-center">Our Latest Properties</h1>
         {loading ? (
