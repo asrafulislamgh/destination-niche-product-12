@@ -14,7 +14,7 @@ const ReviewHome = () => {
 
   return (
     <Container className="my-5 pb-5">
-      <h1 className="py-5 text-center">What Our Clients Say!</h1>
+      <h1 className="py-5 text-center">What Our Clients Say</h1>
       <Row xl={3} lg={3} md={2} sm={2} xs={1} className="gy-4">
         {reviews.map((review) => (
           <Col>
@@ -29,7 +29,14 @@ const ReviewHome = () => {
                 <h5 className="ms-3">{review.displayName}</h5>
               </div>
               <div className="text-center mt-3">
-                <p>
+                <p
+                  style={{
+                    overflow: "hidden",
+                    maxHeight: "6rem",
+                    display: "block",
+                    textOverflow: "ellipsis",
+                  }}
+                >
                   <span className="commentText">{review.comments}</span>
                 </p>
                 <p>{review.rating} out of 5.00</p>

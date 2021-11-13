@@ -27,11 +27,11 @@ const AboutUs = () => {
               deal!
               <br />
               <br />
-              Best Doctors’ innovative services include access to an unrivaled
-              network of physicians who have been selected as the best in their
-              field by other leading doctors. With every service offered, the
-              goal remains the same: to help people in need get the right
-              diagnosis and treatment, significantly improving health outcomes.
+              Real estate listings usually include a lot of pictures, because
+              pictures really are worth a thousand words. But homebuyers
+              routinely tour houses and attend open houses based on the strength
+              of classified ads, too, which may be some lines of text with no
+              images involved.
             </p>
             <Button variant="light" className="common-btn my-3">
               See More

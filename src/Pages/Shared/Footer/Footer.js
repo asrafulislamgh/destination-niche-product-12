@@ -1,5 +1,12 @@
 import React from "react";
-import { Col, Container, Row, Button } from "react-bootstrap";
+import {
+  Col,
+  Container,
+  Row,
+  Button,
+  InputGroup,
+  FormControl,
+} from "react-bootstrap";
 import { Link } from "react-router-dom";
 import logoFooter from "../../../img/logo.png";
 import "./Footer.css";
@@ -11,102 +18,44 @@ const Footer = () => {
         <Row className="gy-5">
           <Col md={3}>
             <div>
-              <img style={{ width: "90%" }} src={logoFooter} alt="logo"></img>
-              <p className="py-4">
-                Tour is fun. We will make your life more enjoyable with our
-                quality. Tourism is travel for pleasure or business; also the
-                theory and practice of touring, the business of attracting,
-                accommodating, and entertaining tourists
+              <h4 className="mb-3">About</h4>
+              <p className="py-2">
+                Trust is the key of our business. We live on your happiness. We
+                always think out of the box to ensure the best quality possible.
+                So Destination Inc. is the final destination of your happy live
+                to live longer.
               </p>
-              <Link to="/aboutus">
+              <Link to="#">
                 <Button variant="link" className="btn common-btn">
                   Learn More
                 </Button>
               </Link>
             </div>
           </Col>
-          <Col md={3}>
-            <h4 className="mb-4">Recent Posts</h4>
-            <div className="d-flex">
-              <div className="d-flex flex-row flex-md-column flex-lg-row">
-                <img
-                  className="footer-img"
-                  style={{ height: "70px", marginRight: "15px" }}
-                  src=""
-                  alt=""
-                />
-                <div>
-                  <p
-                    style={{
-                      color: "#999",
-                      fontSize: ".8rem",
-                      marginBottom: "5px",
-                    }}
-                  >
-                    21st December, 2021
-                  </p>
-                  <h6>Sky diving in Pattaya is..</h6>
-                </div>
-              </div>
+          <Col md={6}>
+            <div className="text-center">
+              <img
+                style={{ maxWidth: "200px", marginBottom: "30px" }}
+                src={logoFooter}
+                alt="logo"
+              ></img>
+              <h3 className="my-4 text-center">Let's Get in Touch</h3>
+              <p className="my-4">
+                Our distinctive buildings fill the skyline and streetscapes of
+                the city
+              </p>
             </div>
-            <div className="d-flex my-3">
-              <div className="d-flex flex-row flex-md-column flex-lg-row">
-                <img
-                  style={{ height: "70px", marginRight: "15px" }}
-                  src=""
-                  alt=""
-                />
-                <div>
-                  <p
-                    style={{
-                      color: "#999",
-                      fontSize: ".8rem",
-                      marginBottom: "5px",
-                    }}
-                  >
-                    3rd November, 2021
-                  </p>
-                  <h6>Olympic is goin on!</h6>
-                </div>
-              </div>
-            </div>
-            <div className="d-flex">
-              <div className="d-flex flex-row flex-md-column flex-lg-row">
-                <img
-                  style={{ height: "70px", marginRight: "15px" }}
-                  src=""
-                  alt=""
-                />
-                <div>
-                  <p
-                    style={{
-                      color: "#999",
-                      fontSize: ".8rem",
-                      marginBottom: "5px",
-                    }}
-                  >
-                    11st January, 2021
-                  </p>
-                  <h6>Are you ready to bang!</h6>
-                </div>
-              </div>
-            </div>
-          </Col>
-          <Col md={3}>
-            <div className="footer-links">
-              <div>
-                <h4 className="mb-4">Quick Links</h4>
-              </div>
-              <li>
-                <Link to="/home">Home</Link>
-              </li>
-              <li>
-                <Link to="/aboutus">About Us</Link>
-              </li>
-              <li>
-                <Link to="/services">Services</Link>
-              </li>
-            </div>
+            {/* subscriber */}
+            <InputGroup style={{ width: "90%" }} className="mb-3 mx-auto">
+              <FormControl
+                placeholder="Email Address"
+                aria-label="Email Address"
+                aria-describedby="basic-addon2"
+              />
+              <Button variant="link" className="common-btn" id="button-addon2">
+                Subscribe
+              </Button>
+            </InputGroup>
           </Col>
           <Col md={3}>
             <div>
@@ -114,17 +63,26 @@ const Footer = () => {
                 <h4 className="mb-4">Contact Us</h4>
               </div>
               <div className="mb-3">
-                <p>Address:</p>
-                <p>Gulshan 1, Gulshan Avenue, Dhaka - 1210, Bangladesh</p>
-              </div>
-              <div className="mb-3">
-                <p>Phone:</p>
-                <p>+880193033**02</p>
-              </div>
-              <div className="mb-3">
-                <p>Email:</p>
                 <p>
-                  <a href="mailto:gdmamun@yahoo.com">gdmamun@yahoo.com</a>
+                  <i class="fas fa-map-marker-alt me-2"></i>Office-1: Gulshan 1,
+                  Gulshan Avenue, Dhaka - 1210, Bangladesh
+                </p>
+              </div>
+              <div className="mb-3">
+                <p>
+                  <i class="fas fa-map-marker-alt me-2"></i>Office-2: Nabinagar,
+                  Savar, Dhaka - 1200, Bangladesh
+                </p>
+              </div>
+              <div className="mb-3">
+                <p>
+                  <i class="fas fa-phone-alt me-2"></i> +880193033**02
+                </p>
+              </div>
+              <div className="mb-3">
+                <p>
+                  <i class="fas fa-envelope me-2"></i>{" "}
+                  <a href="mailto:gdmamun@yahoo.com"> gdmamun@yahoo.com</a>
                 </p>
               </div>
             </div>

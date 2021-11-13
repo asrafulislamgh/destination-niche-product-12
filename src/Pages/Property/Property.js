@@ -11,7 +11,7 @@ const Property = ({ propertyItem }) => {
       <CardGroup>
         <Card className="card-container text-center border-0">
           <Card.Img variant="top" src={img} />
-          <Card.Body className="card-body">
+          <Card.Body className="card-body pb-1">
             <Card.Title className="card-title text-truncate">{name}</Card.Title>
             <Card.Text
               style={{
@@ -48,17 +48,20 @@ const Property = ({ propertyItem }) => {
                 className="px-3 py-2 me-2 badge-icon"
                 text="dark"
               >
-                <i class="fas fa-layer-group me-2"></i> {area}{" "}
+                <i class="fas fa-layer-group me-2 "></i> {area}{" "}
                 <small>
                   ft<sup>2</sup>
                 </small>
               </Badge>
             </Card.Text>
-            <Card.Text className="card-info">
+            <Card.Text className="card-info badge-icon">
               <i class="fas fa-map-marker-alt me-2"></i> {location}
             </Card.Text>
 
-            <Card.Title className="card-title">
+            <Card.Title
+              style={{ color: "#377ef9", fontWeight: "bold" }}
+              className="card-title"
+            >
               ${price} /{" "}
               <small>
                 ft<sup>2</sup>
@@ -67,7 +70,7 @@ const Property = ({ propertyItem }) => {
           </Card.Body>
           <Card.Footer className="card-body border-0">
             <Link to={`/properties/${_id}`}>
-              <Button variant="dark" className="common-btn3">
+              <Button variant="dark" className="common-btn3 mb-3">
                 Book Now
               </Button>
             </Link>
