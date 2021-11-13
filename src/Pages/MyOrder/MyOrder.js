@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Container, Row, Col, Badge, Button, Card } from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
+import userPhoto from "../../img/user1.png";
 
 const MyOrder = () => {
   const [myOrders, setMyOrders] = useState([]);
@@ -125,7 +126,11 @@ const MyOrder = () => {
                   borderRadius: "50%",
                   margin: "5px 5px 5px 0",
                 }}
-                src={myOrder.user?.photoURL}
+                src={
+                  myOrder.user?.photoURL === null
+                    ? userPhoto
+                    : myOrder.user?.photoURL
+                }
                 alt=""
               />
               <small>{myOrder.user?.displayName}</small>

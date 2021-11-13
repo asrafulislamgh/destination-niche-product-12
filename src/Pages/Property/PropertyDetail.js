@@ -80,14 +80,41 @@ const PropertyDetail = () => {
               <h1>{selectedProperty?.name}</h1>
               <p>{selectedProperty?.description}</p>
               <Card.Text className="card-info">
-                <Badge pill bg="warning" className="px-3 me-2" text="dark">
-                  <h6 className="mb-0"> Day: {selectedProperty?.day}</h6>
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-bed me-2"></i> {selectedProperty?.bed}
                 </Badge>
-                <Badge pill bg="dark" className="px-3  me-2" text="light">
-                  <h6 className="mb-0"> Day: {selectedProperty?.night}</h6>
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-bath me-2"></i> {selectedProperty?.bath}
+                </Badge>
+                <Badge
+                  pill
+                  bg="light"
+                  className="px-3 py-2 me-2 badge-icon"
+                  text="dark"
+                >
+                  <i class="fas fa-layer-group me-2"></i>{" "}
+                  {selectedProperty?.area}{" "}
+                  <small>
+                    ft<sup>2</sup>
+                  </small>
                 </Badge>
               </Card.Text>
-              <h3>${selectedProperty?.price}</h3>
+              <h3>
+                ${selectedProperty?.price} /
+                <small>
+                  ft<sup>2</sup>
+                </small>
+              </h3>
             </div>
           </Col>
           <Col xl={3} lg={3} md={12} className="mx-4">
@@ -161,14 +188,14 @@ const PropertyDetail = () => {
             Book Now
           </Button> */}
 
-            <Link to="/services">
+            <Link to="/properties">
               <Button variant="light" className=" mt-4 ms-3">
                 Back
               </Button>
             </Link>
-            <Link to="/myorder">
+            <Link to="/dashboard">
               <Button variant="light" className=" mt-4 ms-3">
-                See all of your orders
+                See all of my orders
               </Button>
             </Link>
           </Col>

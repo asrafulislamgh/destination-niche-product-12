@@ -61,26 +61,6 @@ const HeaderNav = () => {
                 >
                   Dashboard
                 </Nav.Link>
-                // <div>
-                //   <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
-                //     <NavDropdown.Item as={NavLink} to="/myorder">
-                //       My Order
-                //     </NavDropdown.Item>
-                //     <NavDropdown.Item as={NavLink} to="/review">
-                //       Review
-                //     </NavDropdown.Item>
-                //     {isAdmin && (
-                //       <div>
-                //         <NavDropdown.Item as={NavLink} to="/manageorders">
-                //           Manage Orders
-                //         </NavDropdown.Item>
-                //         <NavDropdown.Item as={NavLink} to="/makeadmin">
-                //           Make Admin
-                //         </NavDropdown.Item>
-                //       </div>
-                //     )}
-                //   </NavDropdown>
-                // </div>
               )}
               {isAdmin && (
                 <Nav.Link disabled style={{ color: "red" }}>
