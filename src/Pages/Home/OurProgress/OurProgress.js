@@ -6,7 +6,7 @@ const OurProgress = () => {
   return (
     <div>
       <Container style={{ marginTop: "50px" }}>
-        <Row xl={4} lg={4} md={3} sm={2} xs={1} className="gy-4">
+        <Row xl={4} lg={4} md={4} sm={2} xs={1} className="gy-4">
           <Col>
             <div className="thumb-img">
               <img
@@ -43,9 +43,6 @@ const OurProgress = () => {
               />
             </div>
           </Col>
-        </Row>
-        <Row xl={4} lg={4} md={3} sm={2} xs={1} className="gy-4">
-          <Col></Col>
         </Row>
       </Container>
       <div className="progress-container">
