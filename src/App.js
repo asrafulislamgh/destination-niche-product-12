@@ -2,14 +2,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./contexts/AuthProvider";
-import AdminRoute from "./Pages/AdminRoute/AdminRoute";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
-import Review from "./Pages/Home/Review/Review";
 import Login from "./Pages/login/Login";
-import MakeAdmin from "./Pages/MakeAdmin/MakeAdmin";
-import ManageOrders from "./Pages/ManageOrders/ManageOrders";
-import MyOrder from "./Pages/MyOrder/MyOrder";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Properties from "./Pages/Properties/Properties";
 import PropertyDetail from "./Pages/Property/PropertyDetail";
@@ -41,7 +36,7 @@ function App() {
           <PrivateRoute path="/properties/:id">
             <PropertyDetail />
           </PrivateRoute>
-          <PrivateRoute path="/myorder">
+          {/* <PrivateRoute path="/myorder">
             <MyOrder />
           </PrivateRoute>
           <PrivateRoute path="/review">
@@ -52,7 +47,7 @@ function App() {
           </AdminRoute>
           <AdminRoute path="/makeadmin">
             <MakeAdmin />
-          </AdminRoute>
+          </AdminRoute> */}
         </Switch>
       </Router>
     </AuthProvider>
