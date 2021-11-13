@@ -5,6 +5,7 @@ import AuthProvider from "./contexts/AuthProvider";
 import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import Login from "./Pages/login/Login";
+import NotFoundPage from "./Pages/NotFound/NotFoundPage";
 import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Properties from "./Pages/Properties/Properties";
 import PropertyDetail from "./Pages/Property/PropertyDetail";
@@ -36,18 +37,9 @@ function App() {
           <PrivateRoute path="/properties/:id">
             <PropertyDetail />
           </PrivateRoute>
-          {/* <PrivateRoute path="/myorder">
-            <MyOrder />
-          </PrivateRoute>
-          <PrivateRoute path="/review">
-            <Review />
-          </PrivateRoute>
-          <AdminRoute path="/manageorders">
-            <ManageOrders />
-          </AdminRoute>
-          <AdminRoute path="/makeadmin">
-            <MakeAdmin />
-          </AdminRoute> */}
+          <Route path="*">
+            <NotFoundPage />
+          </Route>
         </Switch>
       </Router>
     </AuthProvider>
