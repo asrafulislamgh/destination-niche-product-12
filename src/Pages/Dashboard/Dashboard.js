@@ -18,6 +18,7 @@ import ManageOrders from "../ManageOrders/ManageOrders";
 import PaymentMethods from "./PaymentMethods";
 import Review from "../Home/Review/Review";
 import AddProduct from "../AddProduct/AddProduct";
+import ManageProducts from "../ManageProducts/ManageProducts";
 
 const Dashboard = () => {
   const { isAdmin } = useAuth();
@@ -145,6 +146,9 @@ const Dashboard = () => {
             </AdminRoute>
             <AdminRoute path={`${path}/addproduct`}>
               <AddProduct />
+            </AdminRoute>
+            <AdminRoute path={`${path}/manageproducts`}>
+              <ManageProducts />
             </AdminRoute>
           </Switch>
         </Row>

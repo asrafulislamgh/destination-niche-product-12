@@ -9,6 +9,7 @@ import {
   Row,
   Button,
 } from "react-bootstrap";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
   const {
@@ -19,7 +20,7 @@ const AddProduct = () => {
   } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    fetch("http://localhost:5000/properties", {
+    fetch("https://intense-taiga-54509.herokuapp.com/properties", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -28,7 +29,11 @@ const AddProduct = () => {
     })
       .then((res) => res.json())
       .then((result) => {
-        alert("A new service is added successfully!");
+        Swal.fire(
+          "Good job!",
+          "You have added a new product successfully!",
+          "success"
+        );
         console.log(result);
       });
     reset();
@@ -99,7 +104,7 @@ const AddProduct = () => {
               <FormControl
                 {...register("img", { required: true })}
                 className="input-field mb-3"
-                placeholder="Image URL"
+                placeholder="Image URL (400x300)"
                 aria-label="img"
                 type="text"
                 aria-describedby="basic-addon2"

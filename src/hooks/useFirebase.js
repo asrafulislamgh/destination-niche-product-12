@@ -102,7 +102,7 @@ const useFirebase = () => {
           },
         }).then((result) => {});
 
-        history.push(location);
+        history?.push(location);
       })
       .catch((error) => {
         setError(error.message);
