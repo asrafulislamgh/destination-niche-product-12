@@ -109,6 +109,10 @@ const PropertyDetail = () => {
                   </small>
                 </Badge>
               </Card.Text>
+              <Card.Text className="card-info badge-icon">
+                <i class="fas fa-map-marker-alt me-2"></i>{" "}
+                {selectedProperty?.location}
+              </Card.Text>
               <h3>
                 ${selectedProperty?.price} /
                 <small>
