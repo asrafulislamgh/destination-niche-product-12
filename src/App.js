@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
 import AuthProvider from "./contexts/AuthProvider";
 import AdminRoute from "./Pages/AdminRoute/AdminRoute";
+import Dashboard from "./Pages/Dashboard/Dashboard";
 import Home from "./Pages/Home/Home";
 import Review from "./Pages/Home/Review/Review";
 import Login from "./Pages/login/Login";
@@ -13,14 +14,11 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Properties from "./Pages/Properties/Properties";
 import PropertyDetail from "./Pages/Property/PropertyDetail";
 import Registration from "./Pages/Registration/Registration";
-import Footer from "./Pages/Shared/Footer/Footer";
-import HeaderNav from "./Pages/Shared/HeaderNav/HeaderNav";
 
 function App() {
   return (
     <AuthProvider>
       <Router>
-        <HeaderNav />
         <Switch>
           <Route exact path="/">
             <Home />
@@ -37,6 +35,9 @@ function App() {
           <Route exact path="/properties">
             <Properties />
           </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard />
+          </PrivateRoute>
           <PrivateRoute path="/properties/:id">
             <PropertyDetail />
           </PrivateRoute>
@@ -53,7 +54,6 @@ function App() {
             <MakeAdmin />
           </AdminRoute>
         </Switch>
-        <Footer></Footer>
       </Router>
     </AuthProvider>
   );

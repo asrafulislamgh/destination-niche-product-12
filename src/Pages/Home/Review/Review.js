@@ -44,10 +44,10 @@ const Review = () => {
 
   return (
     <div>
-      <Container className="justify-content-center my-5">
+      <Container className="justify-content-center">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px", margin: "30px 0" }}>
-            <h3 className="py-5">Leave Your Feedback</h3>
+            <h3 className="pb-5">Leave Your Feedback</h3>
 
             <Form onSubmit={handleSubmit(onSubmit)}>
               <FormControl

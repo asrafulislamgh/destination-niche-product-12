@@ -1,12 +1,11 @@
 import React from "react";
 import "./HeaderNav.css";
 import logo from "../../../img/logo.png";
-import { Container, Nav, Navbar, Button, NavDropdown } from "react-bootstrap";
+import { Container, Nav, Navbar, Button } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import initializingAuthentication from "../../../firebase/firebase.init";
 import useAuth from "../../../hooks/useAuth";
 import userPhoto from "../../../img/user1.png";
-import adminPhoto from "../../../img/admin.jpg";
 
 initializingAuthentication();
 const HeaderNav = () => {
@@ -61,26 +60,34 @@ const HeaderNav = () => {
               </Nav.Link>
 
               {user.email && (
-                <div>
-                  <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
-                    <NavDropdown.Item as={NavLink} to="/myorder">
-                      My Order
-                    </NavDropdown.Item>
-                    <NavDropdown.Item as={NavLink} to="/review">
-                      Review
-                    </NavDropdown.Item>
-                    {isAdmin && (
-                      <div>
-                        <NavDropdown.Item as={NavLink} to="/manageorders">
-                          Manage Orders
-                        </NavDropdown.Item>
-                        <NavDropdown.Item as={NavLink} to="/makeadmin">
-                          Make Admin
-                        </NavDropdown.Item>
-                      </div>
-                    )}
-                  </NavDropdown>
-                </div>
+                <Nav.Link
+                  className="nav-item"
+                  as={NavLink}
+                  activeStyle={{ color: "#fff" }}
+                  to="/dashboard"
+                >
+                  Dashboard
+                </Nav.Link>
+                // <div>
+                //   <NavDropdown title="Dashboard" id="collasible-nav-dropdown">
+                //     <NavDropdown.Item as={NavLink} to="/myorder">
+                //       My Order
+                //     </NavDropdown.Item>
+                //     <NavDropdown.Item as={NavLink} to="/review">
+                //       Review
+                //     </NavDropdown.Item>
+                //     {isAdmin && (
+                //       <div>
+                //         <NavDropdown.Item as={NavLink} to="/manageorders">
+                //           Manage Orders
+                //         </NavDropdown.Item>
+                //         <NavDropdown.Item as={NavLink} to="/makeadmin">
+                //           Make Admin
+                //         </NavDropdown.Item>
+                //       </div>
+                //     )}
+                //   </NavDropdown>
+                // </div>
               )}
               {isAdmin && (
                 <Nav.Link disabled style={{ color: "red" }}>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Col, Container, Row, Spinner } from "react-bootstrap";
 import Property from "../Property/Property";
+import Footer from "../Shared/Footer/Footer";
+import HeaderNav from "../Shared/HeaderNav/HeaderNav";
 
 const Properties = () => {
   const [properties, setProperties] = useState([]);
@@ -20,6 +22,7 @@ const Properties = () => {
   }
   return (
     <div>
+      <HeaderNav />
       <Container className="py-5">
         <h1 className="py-5 text-center">Our Latest Properties</h1>
         {loading ? (
@@ -36,6 +39,8 @@ const Properties = () => {
           </Row>
         )}
       </Container>
+
+      <Footer />
     </div>
   );
 };

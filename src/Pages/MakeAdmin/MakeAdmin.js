@@ -31,7 +31,7 @@ const MakeAdmin = () => {
   };
   return (
     <div>
-      <Container className="justify-content-center my-5">
+      <Container className="justify-content-center mb-5">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px", margin: "100px 0" }}>
             <h3 className="py-5">Make An Admin</h3>

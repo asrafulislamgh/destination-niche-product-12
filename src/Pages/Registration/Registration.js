@@ -10,6 +10,7 @@ import {
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import HeaderNav from "../Shared/HeaderNav/HeaderNav";
 import "./Registration.css";
 
 const Registration = () => {
@@ -45,6 +46,7 @@ const Registration = () => {
 
   return (
     <div>
+      <HeaderNav />
       <Container className="justify-content-center my-5">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px" }}>

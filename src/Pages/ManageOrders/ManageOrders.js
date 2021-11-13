@@ -96,7 +96,7 @@ const ManageOrders = () => {
   return (
     <div>
       <Container>
-        <h2 className="text-center py-5">My Order list ({myOrders.length})</h2>
+        <h2 className="text-center py-5">All Order list ({myOrders.length})</h2>
 
         {myOrders.map((myOrder) => (
           <Row

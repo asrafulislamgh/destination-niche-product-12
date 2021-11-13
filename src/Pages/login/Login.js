@@ -10,13 +10,14 @@ import {
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
+import HeaderNav from "../Shared/HeaderNav/HeaderNav";
 const Login = () => {
   const { googleLogin, error, emailLogin } = useAuth();
   const [loginInfo, setLoginInfo] = useState({});
 
   const location = useLocation();
   const history = useHistory();
-  const redirect_url = location.state?.from || "/";
+  const redirect_url = location.state?.from || "/dashboard";
 
   const handleOnBlur = (e) => {
     const field = e.target.name;
@@ -36,6 +37,7 @@ const Login = () => {
 
   return (
     <div>
+      <HeaderNav />
       <Container className="justify-content-center my-5">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px" }}>
