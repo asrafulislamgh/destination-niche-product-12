@@ -1,4 +1,4 @@
-# Destination Inc. Real state selling Website
+# Destination Inc. Real Estate selling Website
 
 This project is now live here [Destination Inc.'](https://destination-d607a.web.app/).
 
