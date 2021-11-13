@@ -26,11 +26,8 @@ const HomeProperty = () => {
         ) : (
           <Row xl={3} md={3} sm={2} xs={1} className="gy-5">
             {limitedProperty.map((propertyItem) => (
-              <Col>
-                <Property
-                  key={propertyItem._id}
-                  propertyItem={propertyItem}
-                ></Property>
+              <Col key={propertyItem?._id}>
+                <Property propertyItem={propertyItem}></Property>
               </Col>
             ))}
           </Row>

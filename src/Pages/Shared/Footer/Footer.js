@@ -64,24 +64,24 @@ const Footer = () => {
               </div>
               <div className="mb-3">
                 <p>
-                  <i class="fas fa-map-marker-alt me-2"></i>Office-1: Gulshan 1,
-                  Gulshan Avenue, Dhaka - 1210, Bangladesh
+                  <i className="fas fa-map-marker-alt me-2"></i>Office-1:
+                  Gulshan 1, Gulshan Avenue, Dhaka - 1210, Bangladesh
                 </p>
               </div>
               <div className="mb-3">
                 <p>
-                  <i class="fas fa-map-marker-alt me-2"></i>Office-2: Nabinagar,
-                  Savar, Dhaka - 1200, Bangladesh
+                  <i className="fas fa-map-marker-alt me-2"></i>Office-2:
+                  Nabinagar, Savar, Dhaka - 1200, Bangladesh
                 </p>
               </div>
               <div className="mb-3">
                 <p>
-                  <i class="fas fa-phone-alt me-2"></i> +880193033**02
+                  <i className="fas fa-phone-alt me-2"></i> +880193033**02
                 </p>
               </div>
               <div className="mb-3">
                 <p>
-                  <i class="fas fa-envelope me-2"></i>{" "}
+                  <i className="fas fa-envelope me-2"></i>{" "}
                   <a href="mailto:gdmamun@yahoo.com"> gdmamun@yahoo.com</a>
                 </p>
               </div>
@@ -94,17 +94,17 @@ const Footer = () => {
           <Row>
             <Col className="d-flex justify-content-center my-3">
               <li>
-                <Link to="/home">
+                <Link to="#">
                   <i className="fab fa-facebook-f px-3"></i>
                 </Link>
               </li>
               <li>
-                <Link to="/home">
+                <Link to="#">
                   <i className="fab fa-twitter px-3"></i>
                 </Link>
               </li>
               <li>
-                <Link to="/home">
+                <Link to="#">
                   <i className="fab fa-linkedin-in px-3"></i>
                 </Link>
               </li>

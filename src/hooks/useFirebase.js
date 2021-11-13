@@ -9,7 +9,6 @@ import {
   signOut,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
-import { useHistory } from "react-router";
 import Swal from "sweetalert2";
 
 const useFirebase = () => {
@@ -18,7 +17,6 @@ const useFirebase = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [isAdmin, setIsAdmin] = useState(false);
   const auth = getAuth();
-  const history = useHistory();
 
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
@@ -102,7 +100,7 @@ const useFirebase = () => {
           },
         }).then((result) => {});
 
-        history?.push(location);
+        history.push(location);
       })
       .catch((error) => {
         setError(error.message);
@@ -114,7 +112,8 @@ const useFirebase = () => {
     signOut(auth)
       .then(() => {
         setIsLoading(false);
-        history.push("/home");
+        // history.push("/home");s
+        setError("");
       })
       .catch((error) => {
         setError(error.message);

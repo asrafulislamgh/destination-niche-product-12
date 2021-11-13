@@ -50,14 +50,14 @@ const OurProgress = () => {
           <Row lg={4} md={4} sm={2} xs={1} className="gy-4">
             <Col>
               <div>
-                <i class="progress-icon fas fa-home"></i>
+                <i className="progress-icon fas fa-home"></i>
                 <h3 className="icon-heading">156</h3>
                 <p>Listing</p>
               </div>
             </Col>
             <Col>
               <div>
-                <i class="progress-icon fas fa-map-marked-alt"></i>
+                <i className="progress-icon fas fa-map-marked-alt"></i>
                 <h3 className="icon-heading">257</h3>
                 <p>Locations</p>
               </div>

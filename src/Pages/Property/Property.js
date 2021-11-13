@@ -32,7 +32,7 @@ const Property = ({ propertyItem }) => {
                 className="px-3 py-2 me-2 badge-icon"
                 text="dark"
               >
-                <i class="fas fa-bed me-2"></i> {bed}
+                <i className="fas fa-bed me-2"></i> {bed}
               </Badge>
               <Badge
                 pill
@@ -40,7 +40,7 @@ const Property = ({ propertyItem }) => {
                 className="px-3 py-2 me-2 badge-icon"
                 text="dark"
               >
-                <i class="fas fa-bath me-2"></i> {bath}
+                <i className="fas fa-bath me-2"></i> {bath}
               </Badge>
               <Badge
                 pill
@@ -48,14 +48,14 @@ const Property = ({ propertyItem }) => {
                 className="px-3 py-2 me-2 badge-icon"
                 text="dark"
               >
-                <i class="fas fa-layer-group me-2 "></i> {area}{" "}
+                <i className="fas fa-layer-group me-2 "></i> {area}{" "}
                 <small>
                   ft<sup>2</sup>
                 </small>
               </Badge>
             </Card.Text>
             <Card.Text className="card-info badge-icon">
-              <i class="fas fa-map-marker-alt me-2"></i> {location}
+              <i className="fas fa-map-marker-alt me-2"></i> {location}
             </Card.Text>
 
             <Card.Title

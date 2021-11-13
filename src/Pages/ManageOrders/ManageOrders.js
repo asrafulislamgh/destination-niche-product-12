@@ -121,7 +121,7 @@ const ManageOrders = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-bed me-2"></i> {myOrder.bed}
+                  <i className="fas fa-bed me-2"></i> {myOrder.bed}
                 </Badge>
                 <Badge
                   pill
@@ -129,7 +129,7 @@ const ManageOrders = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-bath me-2"></i> {myOrder.bath}
+                  <i className="fas fa-bath me-2"></i> {myOrder.bath}
                 </Badge>
                 <Badge
                   pill
@@ -137,7 +137,7 @@ const ManageOrders = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-layer-group me-2"></i> {myOrder.area}{" "}
+                  <i className="fas fa-layer-group me-2"></i> {myOrder.area}{" "}
                   <small>
                     ft<sup>2</sup>
                   </small>

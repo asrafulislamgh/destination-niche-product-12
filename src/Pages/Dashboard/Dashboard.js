@@ -32,7 +32,7 @@ const Dashboard = () => {
       <DashboardNav />
       <div className="position-relative">
         <Button className="mt-2" variant="primary" onClick={handleShow}>
-          Menu <i class="fas fa-arrow-circle-right"></i>
+          Menu <i className="fas fa-arrow-circle-right"></i>
         </Button>
 
         <Offcanvas style={{ width: "200px" }} show={show} onHide={handleClose}>

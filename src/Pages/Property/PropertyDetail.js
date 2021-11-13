@@ -86,7 +86,7 @@ const PropertyDetail = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-bed me-2"></i> {selectedProperty?.bed}
+                  <i className="fas fa-bed me-2"></i> {selectedProperty?.bed}
                 </Badge>
                 <Badge
                   pill
@@ -94,7 +94,7 @@ const PropertyDetail = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-bath me-2"></i> {selectedProperty?.bath}
+                  <i className="fas fa-bath me-2"></i> {selectedProperty?.bath}
                 </Badge>
                 <Badge
                   pill
@@ -102,7 +102,7 @@ const PropertyDetail = () => {
                   className="px-3 py-2 me-2 badge-icon"
                   text="dark"
                 >
-                  <i class="fas fa-layer-group me-2"></i>{" "}
+                  <i className="fas fa-layer-group me-2"></i>{" "}
                   {selectedProperty?.area}{" "}
                   <small>
                     ft<sup>2</sup>
@@ -110,7 +110,7 @@ const PropertyDetail = () => {
                 </Badge>
               </Card.Text>
               <Card.Text className="card-info badge-icon">
-                <i class="fas fa-map-marker-alt me-2"></i>{" "}
+                <i className="fas fa-map-marker-alt me-2"></i>{" "}
                 {selectedProperty?.location}
               </Card.Text>
               <h3>
