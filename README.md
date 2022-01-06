@@ -1,6 +1,8 @@
 # Destination Inc. Real Estate selling Website
 
 This project is now live here [Destination Inc.'](https://destination-d607a.web.app/).
+Admin: admin@admin.com
+Pass: 123456
 
 ## Feaures fo the website
 
