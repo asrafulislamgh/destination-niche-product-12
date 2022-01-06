@@ -4,14 +4,14 @@ import "./OurProgress.css";
 
 const OurProgress = () => {
   return (
-    <div>
+    <div data-aos="fade-up" data-aos-offset="300">
       <Container style={{ marginTop: "50px" }}>
         <Row xl={4} lg={4} md={4} sm={2} xs={1} className="gy-4">
           <Col>
             <div className="thumb-img">
               <img
                 className="w-100"
-                src="http://spaceworxfm.com/wp-content/uploads/2020/11/real-estate.jpg"
+                src="https://idx-acnt-ihouseprd.b-cdn.net/AR1069112/file_manager/SS%20Images/SAC%20Home%2010%20400x500.png"
                 alt=""
               />
             </div>
@@ -45,7 +45,11 @@ const OurProgress = () => {
           </Col>
         </Row>
       </Container>
-      <div className="progress-container">
+      <div
+        className="progress-container"
+        data-aos="fade-down"
+        data-aos-offset="300"
+      >
         <div className="progress-items container text-center">
           <Row lg={4} md={4} sm={2} xs={1} className="gy-4">
             <Col>

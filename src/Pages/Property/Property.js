@@ -7,7 +7,7 @@ const Property = ({ propertyItem }) => {
   const { _id, name, price, description, img, location, area, bath, bed } =
     propertyItem;
   return (
-    <div>
+    <div data-aos="zoom-in-up" data-aos-offset="300">
       <CardGroup>
         <Card className="card-container text-center border-0">
           <Card.Img variant="top" src={img} />

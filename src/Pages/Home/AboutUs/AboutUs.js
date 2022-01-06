@@ -7,10 +7,18 @@ const AboutUs = () => {
   return (
     <div>
       <Row className="pt-5 gy-5 d-flex align-items-center background">
-        <Col lg={5} md={6} sm={12} className="order-2 order-lg-1 order-md-1">
+        <Col
+          data-aos="fade-right"
+          data-aos-offset="300"
+          lg={5}
+          md={6}
+          sm={12}
+          className="order-2 order-lg-1 order-md-1"
+        >
           <img className="w-100" src={man} alt="" />
         </Col>
         <Col
+          data-aos="fade-left"
           lg={7}
           md={6}
           sm={12}

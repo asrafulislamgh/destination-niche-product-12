@@ -1,3 +1,4 @@
+import Aos from "aos";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
@@ -10,6 +11,7 @@ import PrivateRoute from "./Pages/PrivateRoute/PrivateRoute";
 import Properties from "./Pages/Properties/Properties";
 import PropertyDetail from "./Pages/Property/PropertyDetail";
 import Registration from "./Pages/Registration/Registration";
+Aos.init();
 
 function App() {
   return (

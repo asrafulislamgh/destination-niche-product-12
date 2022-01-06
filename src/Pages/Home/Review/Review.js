@@ -44,7 +44,7 @@ const Review = () => {
 
   return (
     <div>
-      <Container className="justify-content-center">
+      <Container data-aos="fade-up" className="justify-content-center">
         <Row className="d-flex justify-content-center text-center">
           <Col style={{ maxWidth: "400px", margin: "30px 0" }}>
             <h3 className="pb-5">Leave Your Feedback</h3>
@@ -75,7 +75,7 @@ const Review = () => {
                 type="number"
                 name="rating"
                 className="input-field mb-3"
-                placeholder="Rating 1-100"
+                placeholder="Rating 1-5"
                 aria-label="rating"
                 min="1"
                 max="100"

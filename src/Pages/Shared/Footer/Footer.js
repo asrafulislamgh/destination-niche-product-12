@@ -13,10 +13,10 @@ import "./Footer.css";
 
 const Footer = () => {
   return (
-    <div className="bg-dark text-light">
+    <div className="bg-dark text-light" data-aos="fade-up">
       <Container className="py-5 footer-text">
         <Row className="gy-5">
-          <Col md={3}>
+          <Col md={3} data-aos="fade-right">
             <div>
               <h4 className="mb-3">About</h4>
               <p className="py-2">
@@ -32,7 +32,7 @@ const Footer = () => {
               </Link>
             </div>
           </Col>
-          <Col md={6}>
+          <Col md={6} data-aos="fade-up">
             <div className="text-center">
               <img
                 style={{ maxWidth: "200px", marginBottom: "30px" }}
@@ -57,7 +57,7 @@ const Footer = () => {
               </Button>
             </InputGroup>
           </Col>
-          <Col md={3}>
+          <Col md={3} data-aos="fade-left">
             <div>
               <div>
                 <h4 className="mb-4">Contact Us</h4>

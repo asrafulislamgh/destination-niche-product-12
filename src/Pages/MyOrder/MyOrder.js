@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Badge, Button, Card } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Badge,
+  Button,
+  Card,
+  Spinner,
+} from "react-bootstrap";
 import Swal from "sweetalert2";
 import useAuth from "../../hooks/useAuth";
 import userPhoto from "../../img/user1.png";
@@ -68,6 +76,9 @@ const MyOrder = () => {
         }
       });
   };
+  if (myOrders === []) {
+    return <Spinner></Spinner>;
+  }
 
   return (
     <div>

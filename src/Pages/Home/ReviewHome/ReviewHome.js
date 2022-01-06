@@ -17,7 +17,7 @@ const ReviewHome = () => {
       <h1 className="py-5 text-center">What Our Clients Say</h1>
       <Row xl={3} lg={3} md={2} sm={2} xs={1} className="gy-4">
         {reviews.map((review) => (
-          <Col key={review._id}>
+          <Col data-aos="fade-up" data-aos-offset="300" key={review._id}>
             <div className="reviewContainer">
               <div className="d-flex justify-content-center align-items-center text-center">
                 <img

@@ -1,5 +1,13 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Badge, Button, Card } from "react-bootstrap";
+import {
+  Container,
+  Row,
+  Col,
+  Badge,
+  Button,
+  Card,
+  Spinner,
+} from "react-bootstrap";
 import Swal from "sweetalert2";
 import userPhoto from "../../img/user1.png";
 
@@ -94,6 +102,10 @@ const ManageOrders = () => {
       });
   };
 
+  if (!myOrders.length) {
+    return <Spinner></Spinner>;
+  }
+  console.log(myOrders);
   return (
     <div>
       <Container>
