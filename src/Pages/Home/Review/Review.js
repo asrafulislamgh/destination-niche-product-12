@@ -78,6 +78,7 @@ const Review = () => {
                 aria-label="rating"
                 min="1"
                 max="5"
+                step="0.1"
                 aria-describedby="basic-addon2"
               />
               <FloatingLabel controlId="floatingTextarea2" label="Comments">
