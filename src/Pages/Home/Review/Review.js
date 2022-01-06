@@ -22,9 +22,8 @@ const Review = () => {
   } = useForm();
   const history = useHistory();
 
-  const onSubmit = (data, e) => {
+  const onSubmit = (data) => {
     const newData = { ...data };
-    newData.rating = data.rating / 20;
     newData.photoURL = user.photoURL;
 
     fetch("https://intense-taiga-54509.herokuapp.com/reviews", {
@@ -78,7 +77,7 @@ const Review = () => {
                 placeholder="Rating 1-5"
                 aria-label="rating"
                 min="1"
-                max="100"
+                max="5"
                 aria-describedby="basic-addon2"
               />
               <FloatingLabel controlId="floatingTextarea2" label="Comments">
